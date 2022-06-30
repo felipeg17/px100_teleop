@@ -11,10 +11,19 @@ The package is, by now, restricted to operate the robot joint by joint, includin
 1. Ubuntu 20.XX, recommended Ubuntu 20.04 LTS
 2. ROS installed on your machine (for creating this package, ROS Noetic was used. Probably a few things change in case you use another distro)
 3. Dynamixel Workbench package installed
+```sh
+sudo apt install ros-noetic-dynamixel-workbench
+```
 4. Rosbridge Package installed
+```sh
+sudo apt install ros-noetic-rosbridge-server 
+```
+<!-- Recomiendo poner la forma de instalar los paquetes -->
+
 5. PhantomX-100 Robot
 6. Future Technology Devices International chip (FTDI) for PhantomX-100 Dynamixel motors
 
+<!-- Poner enlaces de las instalciones, pueden ser mis repos -->
 
 ### Preparation
 You can use this package on three modes of operation:
@@ -42,6 +51,7 @@ The general process for preparing the package is the following one:
 Now, depending on the operating mode you will use, do the following:
 - For local work:
   - Go to '/web/js/functions.js', find the ros-variable-creation code section and set the value for 'url' atribute as 'ws://localhost:9090'.
+  <!-- pilas con la ruta -->
 - For LAN work:
   - Go to '/web/js/functions.js' and set the value for 'url' attribute as 'ws://{IP_ADDRESS}:9090' in the same section as previous one, replacing {IP_ADDRESS} with your private machine IP address.
 - For Internet work: in order to ensure communications along the internet, a *port forwarding* process is needed.
@@ -57,6 +67,8 @@ Now, depending on the operating mode you will use, do the following:
   - Save configuration and log-out
   Once the port forwarding process is done, you can continue with the following:
   - Go to '/web/js/functions.js' and set the value for 'url' attribute as 'ws://{IP_ADDRESS}:9090', replacing {IP_ADDRESS} with the public IP address of your network.
+
+<!-- Recomendaría poner imagenes -->
 
 As you might have noticed, the process in each case is basically setting an IP address. What changes is the address per sé. This is good to know, because it is needed when typing the url in web browser.
 
@@ -91,6 +103,8 @@ That should be enough to start all the services needed to operate. Now, on the d
 
 
 [Internet Operation Video](https://youtu.be/y2Nrk69Bfws)
+
+<!-- Los videos estan algo oscuros, seria bueno con mas luz y sin voz, solo comentarios en la pantalla-->
 
 ## Robot Inspection Report 
 For the development of the practice, an inspection report was done. It can be found on [this link](assets/Informe%20de%20inspecci%C3%B3n%20PX-100.pdf). Likewise, a complete tracing of the practica was done in [Coda](https://coda.io/d/_d19biUTqpPx/Practica-en-Teleoperacion-de-Robots_suyHu).
